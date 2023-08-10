@@ -26,7 +26,7 @@ const Login = () => {
       if (response.ok) {
         redirect("/Dashboard");
       } else {
-        Error("....");
+        setError("....");
       }
     } catch (error) {
       console.log("Error", error);

@@ -5,17 +5,72 @@
 .TopBar {
   display: flex;
   justify-content: center;
-  background-color: #fff700;
+  background-color: #76ba1b;
 }
 
 .BottomBar {
   display: flex;
   justify-content: center;
-  gap: 50px;
+
   height: 650px;
   align-items: flex-end;
 }
 
+.BottomBar-Main1 {
+  display: flex;
+  gap: 40px;
+}
+
+.BottomBar-Main2 {
+  display: flex;
+  gap: 40px;
+}
+
+.BottomBar-Main3 {
+  display: flex;
+  gap: 40px;
+}
+
 .pictureBot {
   height: 100px;
+}
+
+@media only screen and (max-width: 832px) {
+  .BottomBar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .BottomBar-Main1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .BottomBar-Main2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .BottomBar-Main3 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .BottomBar-Main1 {
+    display: flex;
+    gap: 5px;
+  }
+
+  .BottomBar-Main2 {
+    display: flex;
+    gap: 5px;
+  }
+
+  .BottomBar-Main3 {
+    display: flex;
+    gap: 5px;
+  }
 }

@@ -1,0 +1,137 @@
+.TopBar {
+  display: flex;
+  justify-content: center;
+  background-color: #d3d3d3;
+}
+.TopBar-Main {
+  font-size: 30px;
+}
+
+.Content-Main1 {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 50px;
+}
+.Content-1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.Content-1 i {
+  margin-left: 25px;
+}
+.Picture {
+  height: 100px;
+  width: 100px;
+}
+.Content-2 {
+  display: flex;
+  flex-direction: column;
+}
+.Content-2 i {
+  margin-left: 18px;
+}
+
+.Content-Main2 {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 50px;
+}
+.Content-3 {
+  display: flex;
+  flex-direction: column;
+}
+
+.Content-3 i {
+  margin-left: 20px;
+}
+.Content-4 {
+  display: flex;
+  flex-direction: column;
+}
+.Content-4 i {
+  margin-left: 30px;
+}
+.Content-Main3 {
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-top: 50px;
+}
+.Content-5 {
+  display: flex;
+  flex-direction: column;
+}
+.Content-5 i {
+  margin-left: 12px;
+}
+.Content-6 {
+  display: flex;
+  flex-direction: column;
+}
+.Content-6 i {
+  margin-left: 20px;
+}
+.text-mdb {
+  margin-left: 40px;
+  font-size: 25px;
+}
+
+@media only screen and (max-width: 960px) {
+  .TopBar {
+    display: flex;
+    justify-content: center;
+    background-color: #d3d3d3;
+  }
+  .TopBar-Main {
+    font-size: 25px;
+  }
+  .Content-Main1 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+  .Content-Main2 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+  .Content-Main3 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+}
+@media only screen and (max-width: 479px) {
+  .TopBar {
+    display: flex;
+    justify-content: center;
+    background-color: #d3d3d3;
+  }
+  .TopBar-Main {
+    font-size: 15px;
+  }
+  .Content-Main1 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+  .Content-Main2 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+  .Content-Main3 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin-top: 50px;
+  }
+}

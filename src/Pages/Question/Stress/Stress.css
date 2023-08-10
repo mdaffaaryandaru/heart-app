@@ -1,0 +1,21 @@
+.Body {
+  overflow-x: hidden;
+}
+
+.TopBar {
+  display: flex;
+  justify-content: center;
+  background-color: #fff700;
+}
+
+.BottomBar {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  height: 650px;
+  align-items: flex-end;
+}
+
+.pictureBot {
+  height: 100px;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Question.css";
 
 const Question = () => {
@@ -8,6 +8,63 @@ const Question = () => {
   const relation = require("../component/relation.png");
   const rest = require("../component/rest.png");
   const yoga = require("../component/yoga.png");
+  const [question, setUser] = useState("");
+  const [tittleId, setTittleId] = useState("");
+
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [result, setResult] = useState(null);
+  const token = localStorage.getItem("token");
+
+  // const fetchUserData = (question, tittleId) => {
+  //   fetch(
+  //     `http://localhost:5002/api/question=${question}&titleId=${tittleId}`,
+  //     {
+  //       headers: {
+  //         Authorization: `Bearer ${token}`, // Menggunakan token dalam header Authorization
+  //       },
+  //     },
+  //   )
+  //     .then((response) => response.json()
+  //     .then((data) => {
+  //       setResult(data);
+  //       console.log(data);
+  //     })
+  //
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //     });
+  // };
+  // useEffect(() => {
+  //   fetchUserData();
+  // }, []);
+  // if (!data) {
+  //   return <div>Loading...</div>;
+  // }
+
+  //make get function with parameter question, tittleId, and endpoint http://localhost:5002/api/user
+  //and call token in header from local storage
+  const fetchUserData = (question, tittleId) => {
+    fetch(
+      `http://localhost:5002/api/question=${question}&titleId=${tittleId}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`, // Menggunakan token dalam header Authorization
+        },
+      },
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        setResult(data);
+        console.log(data);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
+  };
+
+  //execute fetchUserData function
 
   return (
     <>

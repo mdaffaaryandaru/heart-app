@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Dashboard.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   const addiction = require("../../component/addiction.png");
@@ -9,7 +9,10 @@ const Dashboard = () => {
   const relation = require("../../component/relation.png");
   const rest = require("../../component/rest.png");
   const yoga = require("../../component/yoga.png");
-  const redirect = useNavigate();
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+  }, []);
 
   return (
     <>

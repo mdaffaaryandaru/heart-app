@@ -9,6 +9,7 @@ const Login = () => {
   const baseEndpoint = process.env.REACT_APP_DATABASE_URL;
   const [error, setError] = useState("");
   const redirect = useNavigate();
+  const [token, setToken] = useState("");
 
   const handleChangePhone = (e) => {
     setPhoneNumber(e.target.value);
@@ -24,6 +25,9 @@ const Login = () => {
         body: JSON.stringify({ phone: phone }),
       });
       if (response.ok) {
+        const data = await response.json();
+        const token = data.token;
+        localStorage.setItem("token", token);
         redirect("/Dashboard");
       } else {
         setError("....");

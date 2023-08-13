@@ -8,11 +8,40 @@
   background-color: #76ba1b;
 }
 
+.Question-box {
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.buttonSlide {
+  display: flex;
+  gap: 500px;
+  margin-top: 100px;
+  justify-content: center;
+  height: 50px;
+}
+
+.buttonSlide-next {
+  height: 20cm;
+}
+
+.buttonSlide-prev {
+}
+
+.pictureNext {
+  height: 50px;
+}
+
+.picturePrev {
+  height: 50px;
+}
+
 .BottomBar {
   display: flex;
   justify-content: center;
 
-  height: 650px;
+  height: 200px;
   align-items: flex-end;
 }
 
@@ -29,6 +58,16 @@
 .BottomBar-Main3 {
   display: flex;
   gap: 40px;
+}
+
+.stars {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
+}
+
+.customized-10 {
 }
 
 .pictureBot {

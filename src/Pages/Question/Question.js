@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 import "./Question.css";
-import addiction from "../component/addiction.png";
-import food from "../component/food.png";
-import relation from "../component/relation.png";
-import exercise from "../component/exercise.png";
-import stress from "../component/yoga.png";
+import addiction from "../../component/addiction.png";
+import food from "../../component/food.png";
+import relation from "../../component/relation.png";
+import exercise from "../../component/exercise.png";
+import stress from "../../component/yoga.png";
 import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
-import Next from "../component/next.png";
-import Previous from "../component/prev.png";
+import Next from "../../component/next.png";
+import Previous from "../../component/prev.png";
 import Rating from "@mui/material/Rating";
+import * as url from "url";
 
 const Question = () => {
   const image = [food, exercise, stress, relation, addiction];
@@ -22,9 +23,11 @@ const Question = () => {
   const token = localStorage.getItem("token");
   const [tittleId, tittle] = useParams().tittle.split("-");
   const [page, setPage] = useState(1);
+  const [isLoading, setIsLoading] = useState(false);
   const [answer, setPhoneNumber] = useState("");
   const redirect = useNavigate();
   const [result2, setResult2] = useState();
+  let [count, setCount] = useState(0);
 
   useEffect(() => {
     const fetchUserData = () => {
@@ -51,7 +54,7 @@ const Question = () => {
   useEffect(() => {
     const fetchUserData = (tittle) => {
       const token = localStorage.getItem("token");
-      const url = `http://localhost:5000/api/title?tittile=${tittle}}`;
+      const url = `http://localhost:5000/api/title?tittle=${tittle}}`;
 
       fetch(url, {
         headers: {
@@ -71,13 +74,6 @@ const Question = () => {
     fetchUserData();
   }, []); // De
 
-  const onClicknext = () => {
-    console.log(result.metadata.totalPage);
-    if (page <= result.metadata.totalPage) {
-      setPage(page + 1);
-      console.log(page);
-    }
-  };
   const handleSubmit = async (e, value, id) => {
     e.preventDefault();
     try {
@@ -96,7 +92,6 @@ const Question = () => {
       });
       if (response.ok) {
         const data = await response.json();
-
         alert("Success");
       } else {
         setError("....");
@@ -113,6 +108,37 @@ const Question = () => {
       alert("silahkan mengisi");
     }
   };
+
+  const onClicknext = () => {
+    if (page <= result.metadata.totalPage) {
+      setPage(page + 1);
+    }
+  };
+
+  useEffect(() => {
+    const checkAnswer = () => {
+      const token = localStorage.getItem("token");
+      const urlCheck = `http://localhost:5000/api/answer/check`;
+      fetch(urlCheck, {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(urlCheck);
+          if (urlCheck == 200) {
+            alert("pindah ke halaman setelahnya");
+          } else {
+            alert("blum beres");
+          }
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+        });
+    };
+    checkAnswer();
+  }, []);
 
   const StyledRating = styled(Rating)({
     "& .MuiRating-iconFilled": {
@@ -170,7 +196,10 @@ const Question = () => {
 
         <div className="BottomBar">
           {result2?.result?.map((item, index) => (
-            <Link to={`/Question/${item.id}-${item.name}`}>
+            <Link
+              to={`/Question/${item.id}-${item.name}`}
+              onClick={window.location.reload}
+            >
               <div className="Content-1">
                 <img
                   src={image[index % image.length]}

@@ -16,7 +16,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = (tittle) => {
       const token = localStorage.getItem("token");
-      const url = `http://localhost:5002/api/title?tittile=${tittle}}`;
+      const url = `http://localhost:5000/api/title?tittle=${tittle}}`;
 
       fetch(url, {
         headers: {

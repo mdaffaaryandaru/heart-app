@@ -29,7 +29,7 @@ const Question = () => {
   useEffect(() => {
     const fetchUserData = () => {
       const token = localStorage.getItem("token");
-      const url = `http://localhost:5002/api/question?type=pagination&page=${page}&limit=1&titleId=${tittleId}}`;
+      const url = `http://localhost:5000/api/question?type=pagination&page=${page}&limit=1&titleId=${tittleId}}`;
 
       fetch(url, {
         headers: {
@@ -51,7 +51,7 @@ const Question = () => {
   useEffect(() => {
     const fetchUserData = (tittle) => {
       const token = localStorage.getItem("token");
-      const url = `http://localhost:5002/api/title?tittile=${tittle}}`;
+      const url = `http://localhost:5000/api/title?tittile=${tittle}}`;
 
       fetch(url, {
         headers: {
@@ -77,15 +77,12 @@ const Question = () => {
       setPage(page + 1);
       console.log(page);
     }
-    if (page > 5) {
-      setPage(1);
-    }
   };
   const handleSubmit = async (e, value, id) => {
     e.preventDefault();
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://localhost:5002/api/answer", {
+      const response = await fetch("http://localhost:5000/api/answer", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,

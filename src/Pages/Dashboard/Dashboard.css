@@ -93,11 +93,10 @@
   font-size: 25px;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1628px) {
   .TopBar {
     display: flex;
     justify-content: center;
-    background-color: #d3d3d3;
   }
 
   .TopBar-Main {
@@ -106,55 +105,18 @@
 
   .Content-Main1 {
     display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
-  }
-
-  .Content-Main2 {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
-  }
-
-  .Content-Main3 {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 50px;
   }
 }
 
-@media only screen and (max-width: 479px) {
+@media only screen and (max-width: 880px) {
   .TopBar {
     display: flex;
     justify-content: center;
-    background-color: #d3d3d3;
   }
 
   .TopBar-Main {
     font-size: 15px;
-  }
-
-  .Content-Main1 {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
-  }
-
-  .Content-Main2 {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
-  }
-
-  .Content-Main3 {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-    margin-top: 50px;
   }
 }

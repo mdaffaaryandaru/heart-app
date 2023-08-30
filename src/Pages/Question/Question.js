@@ -13,9 +13,10 @@ import Next from "../../component/next.png";
 import Previous from "../../component/prev.png";
 import Rating from "@mui/material/Rating";
 import * as url from "url";
+import rest from "../../component/rest.png";
 
 const Question = () => {
-  const image = [food, exercise, stress, relation, addiction];
+  const image = [food, exercise, stress, rest, relation, addiction];
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);

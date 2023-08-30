@@ -1,109 +1,113 @@
 .Body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .TopBar {
-    display: flex;
-    justify-content: center;
-    background-color: #76ba1b;
+  display: flex;
+  justify-content: center;
+  background-color: #76ba1b;
 }
 
 .Question-box {
-    margin-top: 200px;
-    display: flex;
-    justify-content: center;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
 }
 
 .buttonSlide {
-    display: flex;
-    gap: 500px;
-    margin-top: 100px;
-    justify-content: center;
-    height: 50px;
+  display: flex;
+  gap: 500px;
+  margin-top: 100px;
+  justify-content: center;
+  height: 50px;
 }
 
 .buttonSlide-next {
-    height: 20cm;
+  height: 20cm;
 }
 
 .buttonSlide-prev {
 }
 
 .pictureNext {
-    height: 50px;
+  height: 50px;
 }
 
 .picturePrev {
-    height: 50px;
+  height: 50px;
+}
+
+.Content-1 {
+  background-color: #61dafb;
 }
 
 .BottomBar {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    height: 200px;
-    align-items: flex-end;
+  height: 200px;
+  align-items: flex-end;
 }
 
 .BottomBar {
-    gap: 50px;
+  gap: 50px;
 }
 
 .stars {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    height: 20px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  height: 20px;
 }
 
 .customized-10 {
 }
 
 .pictureBot {
-    height: 100px;
+  height: 100px;
 }
 
 @media only screen and (max-width: 832px) {
-    .BottomBar {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-    }
+  .BottomBar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
 
-    .BottomBar-Main1 {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+  .BottomBar-Main1 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    .BottomBar {
-        gap: 10cm;
-    }
+  .BottomBar {
+    gap: 10cm;
+  }
 
-    .BottomBar-Main2 {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+  .BottomBar-Main2 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    .BottomBar-Main3 {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
+  .BottomBar-Main3 {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    .BottomBar-Main1 {
-        display: flex;
-        gap: 5px;
-    }
+  .BottomBar-Main1 {
+    display: flex;
+    gap: 5px;
+  }
 
-    .BottomBar-Main2 {
-        display: flex;
-        gap: 5px;
-    }
+  .BottomBar-Main2 {
+    display: flex;
+    gap: 5px;
+  }
 
-    .BottomBar-Main3 {
-        display: flex;
-        gap: 5px;
-    }
+  .BottomBar-Main3 {
+    display: flex;
+    gap: 5px;
+  }
 }

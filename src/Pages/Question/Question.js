@@ -32,7 +32,7 @@ const Question = () => {
   useEffect(() => {
     const fetchUserData = () => {
       const token = localStorage.getItem("token");
-      const url = `http://localhost:5000/api/question?type=pagination&page=${page}&limit=1&titleId=${tittleId}}`;
+      const url = `http://localhost:5000/api/question?type=pagination&page=${page}&limit=1}`;
 
       fetch(url, {
         headers: {
@@ -113,6 +113,9 @@ const Question = () => {
     if (page <= result.metadata.totalPage) {
       setPage(page + 1);
     }
+    if (page > 58) {
+      setPage(1);
+    }
   };
 
   useEffect(() => {
@@ -127,7 +130,7 @@ const Question = () => {
         .then((response) => response.json())
         .then((data) => {
           console.log(urlCheck);
-          if (urlCheck == 200) {
+          if (urlCheck >= 58) {
             alert("pindah ke halaman setelahnya");
           } else {
             alert("blum beres");
@@ -202,6 +205,7 @@ const Question = () => {
             >
               <div className="Content-1">
                 <img
+                  className="picture"
                   src={image[index % image.length]}
                   alt="image"
                   className="Picture"

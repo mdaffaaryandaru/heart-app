@@ -17,6 +17,7 @@ const Dashboard = () => {
     const fetchUserData = (tittle) => {
       const token = localStorage.getItem("token");
       const url = `http://localhost:5000/api/title?tittle=${tittle}}`;
+      console.log(tittle);
 
       fetch(url, {
         headers: {
